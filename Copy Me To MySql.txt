@@ -1,0 +1,81 @@
+admin
+create database project;
+use project;
+create table accounts
+(U_Id  varchar(20) not null primary key,
+First_Name varchar(20) not null,
+Last_Name varchar(20) not null,
+Email_Id varchar(35) not null unique,
+Phone_No varchar(15) not null unique,
+Password varchar(25) not null,
+Security_Question varchar(40) not null, 
+Answer varchar(20));
+
+create table trains
+(Train_No int(10) primary key,
+Train_Name varchar(30),
+From_Station varchar(30),
+Departure varchar(20),
+To_Station varchar(30),
+Arrival varchar(20),
+Distance varchar(15),
+Travel_Time varchar(15),
+Monday varchar(5),
+Tuesday varchar(5),
+Wednesday varchar(5),
+Thursday varchar(5),
+Friday varchar(5),
+Saturday varchar(5),
+Sunday varchar(5));
+
+create table maharajas_express
+(PNR varchar(20) primary key,
+Tour varchar(30),
+Name varchar(100),
+Age varchar(40),
+Sex varchar(80),
+Name1 varchar(100),
+Age1 varchar(40),
+Sex1 varchar(80),
+Mobile_No varchar(15),
+Email_Id varchar(25));
+
+create table bookings
+(PNR varchar(20) primary key,
+Train_No int(11) not null ,
+Train_Name varchar(30),
+Date varchar(25),From_Station varchar(20),
+To_Station varchar(20),
+Reservation_Upto varchar(20),
+Boarding_Point varchar(20),
+Class varchar(10),
+No_Of_Passengers int(11),
+Charting_Status varchar(10),
+Quota varchar(15),
+Type varchar(15),
+Distance int(20),
+Total_Amt int(10),
+U_Id varchar(20),
+Transaction_Id varchar(20) not null unique);
+
+create table bank
+(Card_No int(11) primary key,
+Expiry_Date varchar(35),
+CVV int(5),
+Name_On_Card varchar(35));
+
+create table ecatering
+(U_Id  varchar(20),
+Restaurant varchar(50),
+Total varchar(20));
+
+insert into trains values(22960,"SURAT INTERCITY","JAMNAGAR - JAM","04:45","SURAT - ST","14:50",561,"10:05","Yes","No","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(19018,"SAU JANATA EXP","JAMNAGAR - JAM","13:55","SURAT - ST","00:50",561,"10:55","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(22946,"SAURASHTRA MAIL","JAMNAGAR - JAM","16:05","SURAT - ST","02:33",561,"10:28","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(19216,"SAURASHTRA EXP","JAMNAGAR - JAM","23:56","SURAT - ST","12:30",561,"12:34","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(12932,"BCT DOUBLEDECKER","AHMEDABAD JN-ADI","06:00","MUMBAI CENTRAL - BCT","13:00",491,"07:00","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(12010,"SHATABDI EXP","AHMEDABAD JN-ADI","14:40","MUMBAI CENTRAL - BCT","21:20",491,"06:40","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(12915,"ASHRAM EXPRESS","AHMEDABAD JN-ADI","18:30","NEW DELHI-NDLS","10:10",934 ,"15:40","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(12957,"SWARNA J RAJ EX","AHMEDABAD JN-ADI","17:40","NEW DELHI-NDLS","07:30",934 ,"13:50","Yes","Yes","Yes","Yes","Yes","Yes","Yes");
+insert into trains values(19031,"HARIDWAR MAIL","AHMEDABAD JN-ADI","10:05","NEW DELHI-NDLS","05:46",963 ,"19:41","Yes","Yes","Yes","Yes","Yes","Yes","Yes"); 
+insert into trains values(12934,"KARNAVATI EXP","AHMEDABAD JN-ADI","04:55","MUMBAI CENTRAL - BCT","12:35",491,"07:40","Yes","Yes","Yes","Yes","Yes","Yes","Yes");       

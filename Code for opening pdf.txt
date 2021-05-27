@@ -1,0 +1,31 @@
+{
+    try {
+Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+"C:\\Users\\Admin\\Desktop\\IP Projects\\railway reservation\\Railway Reservation\\"+trid+".pdf");
+    }
+    catch(Exception e){JOptionPane.showMessageDialog(null, "No Ticket Found ...");} 
+        }
+
+
+--------------------------------------------------------------------or-----------------------------------------------------------------------------------------
+
+
+{
+try {
+
+		if ((new File("C:\\Users\\Admin\\Desktop\\IP Projects\\railway reservation\\Railway Reservation\\"+trid+".pdf")).exists()) {
+
+			Process p = Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler C:\\Users\\Admin\\Desktop\\IP Projects\\railway reservation\\Railway Reservation\\"+trid+".pdf");
+			p.waitFor();
+				
+		} else {
+
+			System.out.println("File is not exists");
+
+		}
+
+		System.out.println("Done");
+
+  	  } catch (Exception ex) {
+		ex.printStackTrace();
+	  }
+}
